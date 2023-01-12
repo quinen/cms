@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  php:
+    container_name: php-cms
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/var/www/html
+    ports:
+      - "80:80"

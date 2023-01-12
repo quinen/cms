@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - init git + composer
 - fichier public/index.php
 - .htaccess dans dossier racine et public
+- docker php + mariadb
 
 ### Changed
 ### Deprecated
