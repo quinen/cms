@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
-class Application extends \Quinen\Cms\Application
+use Quinen\Cms\Application as CmsApplication;
+
+class Application extends CmsApplication
 {
     private $config;
     public function __construct($config)

@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fichier public/index.php
 - .htaccess dans dossier racine et public
 - docker php + mariadb
+- construction du front controller inspiré par https://github.com/pvoznenko/front-controller-php-example
+
 
 ### Changed
 ### Deprecated

@@ -10,21 +10,25 @@ help: ## Affichage des différentes commandes disponibles
 bash:	## run bash inside container
 	docker exec -it $(DOCKER_CONTAINER) bash
 
-.PHONY: log
-log:	## show log
+.PHONY: logs
+logs:	## show log
 	docker logs -f $(DOCKER_CONTAINER)
 
 .PHONY: up
 up:
-	docker-compose up -d
+	docker-compose -f docker/docker-compose.yml up -d
 
 .PHONY: up-build
 up-build:
-	docker-compose up -d --build
+	docker-compose -f docker/docker-compose.yml up -d --build
+
+.PHONY: build
+build:
+	docker-compose -f docker/docker-compose.yml build --no-cache
 
 .PHONY: down
 down:
-	docker-compose down --remove-orphans
+	docker-compose -f docker/docker-compose.yml down --remove-orphans
 
 composer:
 	-docker exec -it $(DOCKER_CONTAINER) chown -R $(USER):$(USER) /var/www/html/vendor
